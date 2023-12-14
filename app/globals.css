@@ -10,7 +10,7 @@ body {
 
 /* Fonts */
 
-@font-face {
+/* @font-face {
   font-family: 'Basier Square';
   src: url('/fonts/basiersquare-bold-webfont.eot');
   src: url('/fonts/basiersquare-bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -52,4 +52,4 @@ body {
        url('/fonts/basiersquare-regularitalic-webfont.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
-}
+} */
