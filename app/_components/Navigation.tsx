@@ -55,7 +55,7 @@ const Navigation = () => {
 				/>
 				<div
 					className={`absolute top-0 right-0 w-[300px] h-screen backdrop-blur-md bg-white/75 p-3 animate-in fade-in-0 duration-300 transition ${
-						isOpen && 'hidden'
+						!isOpen && 'hidden'
 					}`}
 				>
 					<XIcon
