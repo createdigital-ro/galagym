@@ -13,12 +13,13 @@ const config: Config = {
 			fontFamily: {
 				basier: ['Basier Square', 'sans-serif'],
 			},
+			animation: {},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('tailwindcss-animate')],
 };
 export default config;
