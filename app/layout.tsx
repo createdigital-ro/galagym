@@ -13,6 +13,11 @@ const basier = localFont({
 			style: 'normal',
 		},
 		{
+			path: './fonts/basiersquare-semibold-webfont.woff2',
+			weight: '600',
+			style: 'normal',
+		},
+		{
 			path: './fonts/basiersquare-medium-webfont.woff2',
 			weight: '500',
 			style: 'normal',
@@ -41,7 +46,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className={basier.className}>
 				<Announcement message='Programul nostru de sarbatori' />
 				<Navigation />
-				{children}
+				<div className='max-w-[1700px] mx-auto'>
+					<div className='mx-4'>{children}</div>
+				</div>
 			</body>
 		</html>
 	);

@@ -1,5 +1,10 @@
+'use client';
+
+import { MenuIcon, XIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import { sleep } from '@/utils/timing';
 
 const pages = [
 	{
@@ -26,17 +31,40 @@ const pages = [
 ];
 
 const Navigation = () => {
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<nav className='flex p-8 items-center justify-between'>
 			<Link href={'/'}>
 				<Image src={'/logo.svg'} width={115} height={49} alt='Gala Gym Logo' />
 			</Link>
-			<div className='flex gap-8'>
-				{pages.map(({ text, link }) => (
-					<Link key={text} className='hover:underline' href={link}>
-						{text}
-					</Link>
-				))}
+			<div className='hidden sm:block'>
+				<div className='flex gap-8'>
+					{pages.map(({ text, link }) => (
+						<Link key={text} className='hover:underline' href={link}>
+							{text}
+						</Link>
+					))}
+				</div>
+			</div>
+			<div className='sm:hidden'>
+				<MenuIcon
+					className='cursor-pointer'
+					onClick={() => {
+						setIsOpen((open) => !open);
+					}}
+				/>
+				<div
+					className={`absolute top-0 right-0 w-[300px] h-screen backdrop-blur-md bg-white/75 p-3 animate-in fade-in-0 duration-300 transition ${
+						!isOpen && 'hidden'
+					}`}
+				>
+					<XIcon
+						className='cursor-pointer'
+						onClick={() => {
+							setIsOpen((open) => !open);
+						}}
+					/>
+				</div>
 			</div>
 		</nav>
 	);

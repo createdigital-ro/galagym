@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const Program = () => {
   return (
@@ -15,13 +15,13 @@ const Program = () => {
         alt="Background element"
         width={130}
         height={130}
-        className="hidden md:block absolute right-0 top-32 w-[90px] h-[400px] lg:w-[200px] lg:h-[500px]"
+        className="hidden md:block absolute right-0 top-24 w-[90px] h-[400px] lg:w-[200px] lg:h-[500px]"
       />
       <h1 className="text-center font-bold text-4xl mb-10 md:text-6xl ">
         Program
       </h1>
       <div className="flex flex-col gap-5 items-center max-w-[600px] px-8 mx-auto">
-        <div className="bg-black text-white text-center py-4 w-[400px] sm:w-full shadow-[4px_4px] rounded-lg shadow-yellow-400">
+        <div className="bg-black text-white text-center py-4 w-full shadow-[4px_4px] rounded-lg shadow-yellow-400">
           <p className="sm:text-3xl  lg:text-4xl  font-semibold pb-2">
             Luni - Vineri
           </p>
@@ -30,7 +30,7 @@ const Program = () => {
           </p>
         </div>
 
-        <div className="bg-black text-white text-center py-4 w-[400px] sm:w-full shadow-[4px_4px] rounded-lg shadow-yellow-400">
+        <div className="bg-black text-white text-center py-4 w-full shadow-[4px_4px] rounded-lg shadow-yellow-400">
           <p className="sm:text-3xl  lg:text-4xl  font-semibold pb-2">
             Sambata
           </p>
@@ -39,15 +39,13 @@ const Program = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-center">
-          <p className="sm:text-3xl  lg:text-4xl font-semibold">Duminica</p>
-          <p className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wider">
-            INCHIS
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+				<div className='flex flex-col items-center'>
+					<p className='sm:text-3xl  lg:text-4xl font-semibold'>Duminica</p>
+					<p className='text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wider'>INCHIS</p>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Program;
