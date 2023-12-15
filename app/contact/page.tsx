@@ -1,5 +1,6 @@
 import React from "react";
 import { Phone, Facebook, Instagram } from "lucide-react";
+import EmailForm from "../_components/EmailForm";
 
 const Contact = () => {
   const socials = [
@@ -39,6 +40,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
+        <EmailForm />
       </div>
     </div>
   );
