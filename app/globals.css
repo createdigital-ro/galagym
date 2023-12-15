@@ -8,48 +8,21 @@ body {
   @apply font-basier;
 }
 
-/* Fonts */
-
-/* @font-face {
-  font-family: 'Basier Square';
-  src: url('/fonts/basiersquare-bold-webfont.eot');
-  src: url('/fonts/basiersquare-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/basiersquare-bold-webfont.woff2') format('woff2'),
-       url('/fonts/basiersquare-bold-webfont.woff') format('woff'),
-       url('/fonts/basiersquare-bold-webfont.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-@font-face {
-  font-family: 'Basier Square';
-  src: url('/fonts/basiersquare-medium-webfont.eot');
-  src: url('/fonts/basiersquare-medium-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/basiersquare-medium-webfont.woff2') format('woff2'),
-       url('/fonts/basiersquare-medium-webfont.woff') format('woff'),
-       url('/fonts/basiersquare-medium-webfont.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-white;
 }
 
-@font-face {
-  font-family: 'Basier Square';
-  src: url('/fonts/basiersquare-regular-webfont.eot');
-  src: url('/fonts/basiersquare-regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/basiersquare-regular-webfont.woff2') format('woff2'),
-       url('/fonts/basiersquare-regular-webfont.woff') format('woff'),
-       url('/fonts/basiersquare-regular-webfont.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-black;
 }
 
-@font-face {
-  font-family: 'Basier Square';
-  src: url('/fonts/basiersquare-regularitalic-webfont.eot');
-  src: url('/fonts/basiersquare-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/basiersquare-regularitalic-webfont.woff2') format('woff2'),
-       url('/fonts/basiersquare-regularitalic-webfont.woff') format('woff'),
-       url('/fonts/basiersquare-regularitalic-webfont.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-} */
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-yellow-400
+}
