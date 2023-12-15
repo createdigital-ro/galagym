@@ -20,8 +20,13 @@ const EmailForm = (props: Props) => {
     }));
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const res = fetch('/api/sendEmail', {
+        method: 'POST',
+        body: JSON.stringify(data)
+    })
+
     console.log("yes")
   }
 
