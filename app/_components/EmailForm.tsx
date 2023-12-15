@@ -93,7 +93,7 @@ const EmailForm = (props: Props) => {
           />
           <button
             type="submit"
-            className=" bg-[#0f0f0f] px-4 xl:px-6 xl:text-2xl text-center xl:py-2  text-white rounded-full mx-auto mt-2 py-1 hover:shadow-[2px_2px] hover:shadow-yellow-400 hover:scale-105 active:scale-105 active:shadow-yellow-400 active:shadow-[2px_2px] active:text-yellow-400"
+            className=" bg-[#0f0f0f] px-4 xl:px-6 xl:text-2xl text-center xl:py-2  text-white rounded-lg mx-auto mt-2 py-1 hover:shadow-[2px_2px] hover:shadow-yellow-400 hover:scale-105 active:scale-105 active:shadow-yellow-400 active:shadow-[2px_2px] active:text-yellow-400"
           >
             Trimite
           </button>

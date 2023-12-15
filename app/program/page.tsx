@@ -15,12 +15,12 @@ const Program = () => {
         alt="Background element"
         width={130}
         height={130}
-        className="hidden md:block absolute right-0 top-24 w-[90px] h-[400px] lg:w-[200px] lg:h-[500px]"
+        className="hidden md:block absolute right-0 top-32 w-[90px] h-[400px] lg:w-[200px] lg:h-[500px]"
       />
       <h1 className="text-center font-bold text-4xl mb-10 md:text-6xl ">
         Program
       </h1>
-      <div className="flex flex-col gap-5 items-center max-w-[600px] px-8 mx-auto">
+      <div className="flex flex-col gap-5 items-center max-w-[400px] sm:max-w-[600px] px-8 mx-auto">
         <div className="bg-black text-white text-center py-4 w-full shadow-[4px_4px] rounded-lg shadow-yellow-400">
           <p className="sm:text-3xl  lg:text-4xl  font-semibold pb-2">
             Luni - Vineri
