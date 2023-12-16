@@ -9,8 +9,7 @@ const resend = new Resend(process.env.RESEND_SECRET);
 
 export async function POST(req: NextRequest) {
 	try {
-		const body = JSON.stringify(req.body);
-		const formData = ZodFormData.safeParse(body);
+		const formData = ZodFormData.safeParse(req.body);
 		if (!formData.success)
 			return NextResponse.json(
 				'Datele trimise nu sunt valide. Contactati un administrator daca credeti ca aceasta a fost o greseala.'
