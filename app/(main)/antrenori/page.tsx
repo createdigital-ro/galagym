@@ -43,7 +43,7 @@ const Echipa = () => {
 				} md:grid-cols-2 w-fit mx-auto md:justify-center items-center md:gap-10 gap-8 mt-12`}
 			>
 				{echipa.map((member) => (
-					<Link href='/preturi'>
+					<Link key={member.name} href='/preturi'>
 						<div className='border-2 border-[#0f0f0f] shadow-lg hover:scale-105 active:scale-105'>
 							<Image
 								src={member.imageUrl}

@@ -1,10 +1,9 @@
-import "@/app/globals.css";
-import Announcement from "@/app/_components/Announcement";
-import Footer from "@/app/_components/Footer";
-import Navigation from "@/app/_components/Navigation";
-import { basier } from "@/utils/fonts";
-import { PropsWithChildren } from "react";
-import { Toaster } from "react-hot-toast";
+import Announcement from '@/app/_components/Announcement';
+import Navigation from '@/app/_components/Navigation';
+import { basier } from '@/utils/fonts';
+import { PropsWithChildren } from 'react';
+import { Toaster } from 'react-hot-toast';
+import '@/app/globals.css';
 
 const MainLayout = ({ children }: PropsWithChildren) => {
   return (
