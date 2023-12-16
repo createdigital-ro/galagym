@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+
 import { Resend } from 'resend';
 import { EmailTemplate } from '@/app/_components/email-template';
 import { ReactElement } from 'react';

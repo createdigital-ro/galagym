@@ -33,7 +33,7 @@ const cards = [
 export default function Home() {
 	return (
 		<div className='mt-20'>
-			<div className='flex flex-col-reverse lg:flex-row gap-8 items-center justify-between'>
+			<section className='flex flex-col-reverse lg:flex-row gap-8 items-center justify-between'>
 				<div>
 					<h1 className='text-5xl xl:text-6xl 2xl:text-7xl font-semibold'>
 						ANTRENEAZĂ-TE. <br />
@@ -47,9 +47,9 @@ export default function Home() {
 				<div className=''>
 					<Image className='shadow-hard-xl' src={'/poza.png'} height={1200} width={800} alt='poza' />
 				</div>
-			</div>
+			</section>
 			<hr className='my-24 border-black max-w-7xl mx-auto' />
-			<div>
+			<section>
 				<div className='text-center'>
 					<h2 className='text-6xl font-bold text-center'>Motive sa ni te alaturi</h2>
 					<p className='text-lg my-1'>Motivul perfect pentru a ne acompania în călătoria ta fitness</p>
@@ -65,7 +65,13 @@ export default function Home() {
 						</div>
 					))}
 				</div>
-			</div>
+			</section>
+			<section className='bg-yellow-400 w-full py-12 shadow-hard-xl'>
+				<div className='text-center'>
+					<h2 className='text-6xl font-bold text-center'>Tarife abonamente</h2>
+					<p className='text-lg my-1'>Descopera tipurile noastre de abonomente, precum si preturile lor</p>
+				</div>
+			</section>
 		</div>
 	);
 }

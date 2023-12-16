@@ -1,6 +1,7 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
+
 import toast from 'react-hot-toast';
 import * as z from 'zod';
 
@@ -31,7 +32,6 @@ const EmailForm = () => {
 		subject: '',
 		message: '',
 	};
-	const [error, setError] = useState('');
 	const [formData, setFormData] = useState(emptyData);
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
