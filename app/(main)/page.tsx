@@ -14,7 +14,7 @@ const personalTrainer = memberships.personalTrainer;
 const cards = [
 	{
 		icon: <PersonStanding className={cardClass} />,
-		title: 'Antrenorii nostrii',
+		title: 'Antrenorii nostri',
 		content:
 			'Alătură-te nouă pentru o experiență de fitness condusă de specialiști certificați. Beneficiază de ghidare profesională și susținere personalizată pentru a-ți atinge obiectivele.',
 	},
