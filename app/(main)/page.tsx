@@ -1,7 +1,15 @@
+'use client';
+
 import { BookHeart, CalendarHeart, Dumbbell, PersonStanding } from 'lucide-react';
 import Image from 'next/image';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../_components/ui/tabs';
+import { memberships } from '@/app/(main)/preturi/page';
 
 const cardClass = 'w-8 h-8';
+
+const unlimited = [...memberships.unlimited];
+const limited = [...memberships.limited];
+const personalTrainer = [...memberships.personalTrainer];
 
 const cards = [
 	{
@@ -66,11 +74,96 @@ export default function Home() {
 					))}
 				</div>
 			</section>
-			<section className='bg-yellow-400 w-full py-12 shadow-hard-xl'>
+			<section className='bg-yellow-400 w-full py-16 my-12 shadow-hard-xl'>
 				<div className='text-center'>
 					<h2 className='text-6xl font-bold text-center'>Tarife abonamente</h2>
 					<p className='text-lg my-1'>Descopera tipurile noastre de abonomente, precum si preturile lor</p>
 				</div>
+				<Tabs defaultValue='nelimitat'>
+					<TabsList className='p-2 py-3 bg-white mx-auto my-8 rounded-full w-fit flex gap-4'>
+						<TabsTrigger
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full'
+							value='nelimitat'
+						>
+							Nelimitat
+						</TabsTrigger>
+						<TabsTrigger
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full'
+							value='sedinte'
+						>
+							Sedinte
+						</TabsTrigger>
+						<TabsTrigger
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full'
+							value='personalizate'
+						>
+							Antrenor personal
+						</TabsTrigger>
+					</TabsList>
+					<TabsContent
+						className='flex max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
+						value='nelimitat'
+					>
+						{unlimited.map((membership) => (
+							<div
+								key={membership.type}
+								className='bg-white text-black even:scale-125 rounded-md w-[200px] py-3 px-5 mx-auto shadow-[3px_3px] shadow-black relative'
+							>
+								{membership.tag && (
+									<span className='bg-neutral-200 rounded-full text-[#0f0f0f] text-xs px-2 font-bold absolute -top-2 right-3'>
+										{membership.tag}
+									</span>
+								)}
+								<div className='flex flex-col leading-5'>
+									<p className='font-bold'>{membership.type}</p>
+									<p>{membership.days} de zile</p>
+								</div>
+								<p className='mt-8 font-bold'>{membership.price} lei</p>
+							</div>
+						))}
+					</TabsContent>
+					<TabsContent className='flex max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto' value='sedinte'>
+						{limited.map((membership) => (
+							<div
+								key={membership.type}
+								className='bg-white text-black even:scale-125 rounded-md w-[200px] py-3 px-5 mx-auto shadow-[3px_3px] shadow-black relative'
+							>
+								{membership.tag && (
+									<span className='bg-neutral-200 rounded-full text-[#0f0f0f] text-xs px-2 font-bold absolute -top-2 right-3'>
+										{membership.tag}
+									</span>
+								)}
+								<div className='flex flex-col leading-5'>
+									<p className='font-bold'>{membership.type}</p>
+									<p>{membership.days} de zile</p>
+								</div>
+								<p className='mt-8 font-bold'>{membership.price} lei</p>
+							</div>
+						))}
+					</TabsContent>
+					<TabsContent
+						className='flex max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
+						value='personalizate'
+					>
+						{personalTrainer.map((membership) => (
+							<div
+								key={membership.type}
+								className='bg-white text-black even:scale-125 rounded-md w-[200px] py-3 px-5 mx-auto shadow-[3px_3px] shadow-black relative'
+							>
+								{membership.tag && (
+									<span className='bg-neutral-200 rounded-full text-[#0f0f0f] text-xs px-2 font-bold absolute -top-2 right-3'>
+										{membership.tag}
+									</span>
+								)}
+								<div className='flex flex-col leading-5'>
+									<p className='font-bold'>{membership.type}</p>
+									<p>{membership.days} de zile</p>
+								</div>
+								<p className='mt-8 font-bold'>{membership.price} lei</p>
+							</div>
+						))}
+					</TabsContent>
+				</Tabs>
 			</section>
 		</div>
 	);
