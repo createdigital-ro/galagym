@@ -1,21 +1,42 @@
 'use client';
 
 import React, { ChangeEvent, useState } from 'react';
+import toast from 'react-hot-toast';
 import * as z from 'zod';
+
+export const ZodFormData = z.object({
+	name: z.string({
+		required_error: 'Trebuie sa introduceti un email.',
+		invalid_type_error: 'Numele nu este un sir de caractere valid.',
+	}),
+	email: z.string().email({ message: 'Adresa de email introdusa este invalida.' }),
+	subject: z
+		.string({
+			required_error: 'Trebuie sa introduceti un mesaj.',
+			invalid_type_error: 'Mesajul nu este un sir de caractere valid.',
+		})
+		.min(5, { message: 'Subiectul trebuie sa aiba cel putin 5 caractere.' }),
+	message: z
+		.string({
+			required_error: 'Trebuie sa introduceti un mesaj.',
+			invalid_type_error: 'Mesajul nu este un sir de caractere valid.',
+		})
+		.min(10, { message: 'Mesajul trebuie sa aiba cel putin 10 caractere.' }),
+});
 
 const EmailForm = () => {
 	const emptyData = {
-		email: '',
 		name: '',
-		message: '',
+		email: '',
 		subject: '',
+		message: '',
 	};
-	const [message, setMessage] = useState('');
-	const [data, setData] = useState(emptyData);
+	const [error, setError] = useState('');
+	const [formData, setFormData] = useState(emptyData);
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
-		setData((prevData) => ({
+		setFormData((prevData) => ({
 			...prevData,
 			[name]: value,
 		}));
@@ -23,20 +44,21 @@ const EmailForm = () => {
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-
+		const parseRes = ZodFormData.safeParse(formData);
+		if (!parseRes.success) return toast.error(parseRes.error.errors[0].message);
 		try {
 			const res = await fetch('/api/sendEmail', {
 				method: 'POST',
-				body: JSON.stringify(data),
+				body: JSON.stringify(formData),
 			});
-
 			if (res.ok) {
-				setData(emptyData);
+				toast.success('Email-ul a fost trimis cu succes.');
+				setFormData(emptyData);
 			} else {
-				setData(data);
+				setFormData(formData);
 			}
 		} catch (error) {
-			setMessage('Eroare de conexiune. Incercati mai tarziu');
+			return toast.error(`${error}`);
 		}
 	};
 
@@ -53,42 +75,39 @@ const EmailForm = () => {
 				<input
 					type='text'
 					name='name'
-					value={data.name}
+					value={formData.name}
 					onChange={handleChange}
 					placeholder='Nume intreg'
-					required
 					className={inputStyles}
 				/>
 				<input
 					type='email'
 					name='email'
-					value={data.email}
+					value={formData.email}
 					onChange={handleChange}
 					placeholder='Adresa de email'
-					required
 					className={inputStyles}
 				/>
 				<input
 					type='text'
 					name='subject'
-					value={data.subject}
+					value={formData.subject}
 					onChange={handleChange}
 					placeholder='Subiect'
-					required
 					className={inputStyles}
 				/>
 				<input
 					type='text'
 					name='message'
-					value={data.message}
+					value={formData.message}
 					onChange={handleChange}
 					placeholder='Mesaj'
-					required
 					className={inputStyles}
 				/>
+				{error && <p>{error}</p>}
 				<button
 					type='submit'
-					className=' bg-[#0f0f0f] px-4 xl:px-6 xl:text-2xl text-center xl:py-2 text-white rounded-lg mx-auto mt-2 py-1 hover:shadow-[2px_2px] hover:shadow-yellow-400 hover:scale-105 active:scale-105 active:shadow-yellow-400 active:shadow-[2px_2px] active:text-yellow-400'
+					className=' bg-[#0f0f0f] w-full transition px-4 xl:px-6 xl:text-lg text-center xl:py-2 text-white rounded-lg mx-auto mt-2 py-1 hover:shadow-[2px_2px] hover:shadow-yellow-400 active:scale-105 active:shadow-yellow-400 active:shadow-[2px_2px] active:text-yellow-400'
 				>
 					Trimite
 				</button>

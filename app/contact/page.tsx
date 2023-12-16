@@ -43,7 +43,7 @@ const Contact = () => {
 						{socials.map((s) => (
 							<div
 								key={s.social}
-								className='flex text-[#0f0f0f] bg-white w-[200px] mx-auto py-2 rounded-full gap-2 hover:shadow-[2px_2px] hover:shadow-yellow-400 hover:scale-105 active:scale-105 active:shadow-[2px_2px] active:shadow-yellow-400'
+								className='flex transition text-[#0f0f0f] bg-white w-[200px] mx-auto py-2 rounded-full gap-2 hover:shadow-[2px_2px] hover:shadow-yellow-400 hover:scale-105 active:scale-105 active:shadow-[2px_2px] active:shadow-yellow-400'
 							>
 								<i className='ml-4'>{s.icon}</i>
 								<a href={s.link}>{s.social}</a>

@@ -4,6 +4,7 @@ import './globals.css';
 
 import Announcement from './_components/Announcement';
 import Navigation from './_components/Navigation';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<div className='max-w-[1700px] mx-auto'>
 					<div className='mx-4'>{children}</div>
 				</div>
+				<Toaster position='top-center' />
 			</body>
 		</html>
 	);
