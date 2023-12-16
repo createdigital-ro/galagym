@@ -63,9 +63,14 @@ const Navigation = () => {
 							setIsOpen((open) => !open);
 						}}
 					/>
-					<div className='flex flex-col gap-4 ml-auto my-24'>
+					<div className='flex flex-col gap-2 ml-auto my-24'>
 						{pages.map(({ text, link }) => (
-							<Link key={text} className='hover:underline text-6xl text-right' href={link}>
+							<Link
+								onClick={() => setIsOpen((prev) => !prev)}
+								key={text}
+								className='hover:underline text-4xl text-right'
+								href={link}
+							>
 								{text}
 							</Link>
 						))}

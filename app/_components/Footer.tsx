@@ -45,7 +45,7 @@ const Footer = (props: Props) => {
 	return (
 		<footer className='bg-[#0f0f0f] text-white flex flex-col md:flex-row justify-between xl:justify-around px-16 py-14 mt-[100px] md:mt-[150px] items-start '>
 			<div className='flex flex-col justify-center gap-2 items-center xl:mt-4 mb-4 md:mb-0'>
-				<Image src='/logo.svg' alt='Logo gala gym' width={100} height={100} />
+				<Image src='/logo.svg' className='md:mr-auto' alt='Logo gala gym' width={100} height={100} />
 				<address>
 					<a href='https://www.google.com/maps/place/Gala+Gym/@44.4100839,26.177722,17z/data=!3m1!4b1!4m6!3m5!1s0x40b1fc22089f71db:0xda6b8e24b73af3dc!8m2!3d44.4100801!4d26.1802969!16s%2Fg%2F11c70j2rmk?entry=ttu'>
 						B-dul. Theodor Pallady 35, sector 3, Bucuresti

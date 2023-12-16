@@ -32,7 +32,7 @@ const cards = [
 	},
 	{
 		icon: <BookHeart className={`${cardClass}`} />,
-		title: 'Programe de Fitness Personalizate',
+		title: 'Programe de Fitness',
 		content:
 			'Explorează programe de fitness adaptate nevoilor tale specifice. De la începători până la avansați, oferim planuri personalizate care îți pot transforma obiectivele în realitate. ',
 	},
@@ -67,7 +67,7 @@ export default function Home() {
 						<div key={card.title} className='max-w-md mx-auto'>
 							<div className='flex gap-4 items-center justify-center md:justify-start font-semibold mb-3'>
 								<i>{card.icon}</i>
-								<span className='text-xl'>{card.title}</span>
+								<p className='text-xl w-fit text-center'>{card.title}</p>
 							</div>
 							<p className='text-lg text-center md:text-left'>{card.content}</p>
 						</div>
