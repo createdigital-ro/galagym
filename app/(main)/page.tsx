@@ -101,7 +101,7 @@ export default function Home() {
 						</TabsTrigger>
 					</TabsList>
 					<TabsContent
-						className='flex max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
+						className='flex flex-col md:flex-row max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
 						value='nelimitat'
 					>
 						{unlimited.map((membership) => (
@@ -122,7 +122,10 @@ export default function Home() {
 							</div>
 						))}
 					</TabsContent>
-					<TabsContent className='flex max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto' value='sedinte'>
+					<TabsContent
+						className='flex flex-col md:flex-row max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
+						value='sedinte'
+					>
 						{limited.map((membership) => (
 							<div
 								key={membership.type}
@@ -142,7 +145,7 @@ export default function Home() {
 						))}
 					</TabsContent>
 					<TabsContent
-						className='flex max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
+						className='flex flex-col md:flex-row max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
 						value='personalizate'
 					>
 						{personalTrainer.map((membership) => (
