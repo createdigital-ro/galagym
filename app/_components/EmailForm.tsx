@@ -6,10 +6,12 @@ import toast from 'react-hot-toast';
 import * as z from 'zod';
 
 export const ZodFormData = z.object({
-	name: z.string({
-		required_error: 'Trebuie sa introduceti un email.',
-		invalid_type_error: 'Numele nu este un sir de caractere valid.',
-	}),
+	name: z
+		.string({
+			required_error: 'Trebuie sa introduceti un email.',
+			invalid_type_error: 'Numele nu este un sir de caractere valid.',
+		})
+		.min(1, { message: 'Numele trebuie sa fie mai lung de un caracter.' }),
 	email: z.string().email({ message: 'Adresa de email introdusa este invalida.' }),
 	subject: z
 		.string({

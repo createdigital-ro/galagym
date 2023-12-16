@@ -1,5 +1,3 @@
-import Announcement from '@/app/_components/Announcement';
-import Navigation from '@/app/_components/Navigation';
 import { basier } from '@/utils/fonts';
 import { PropsWithChildren } from 'react';
 import { Toaster } from 'react-hot-toast';
@@ -10,7 +8,7 @@ const MainLayout = ({ children }: PropsWithChildren) => {
 		<>
 			<html lang='en'>
 				<body className={basier.className}>
-					<div className='mx-4'>{children}</div>
+					{children}
 					<Toaster position='top-center' />
 				</body>
 			</html>
