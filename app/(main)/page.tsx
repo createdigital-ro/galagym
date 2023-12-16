@@ -3,13 +3,13 @@
 import { BookHeart, CalendarHeart, Dumbbell, PersonStanding } from 'lucide-react';
 import Image from 'next/image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../_components/ui/tabs';
-import { memberships } from '@/app/(main)/preturi/page';
+import { memberships } from '@/utils/static';
 
 const cardClass = 'w-8 h-8';
 
-const unlimited = [...memberships.unlimited];
-const limited = [...memberships.limited];
-const personalTrainer = [...memberships.personalTrainer];
+const unlimited = memberships.unlimited;
+const limited = memberships.limited;
+const personalTrainer = memberships.personalTrainer;
 
 const cards = [
 	{
