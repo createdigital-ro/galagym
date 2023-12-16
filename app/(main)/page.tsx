@@ -82,19 +82,19 @@ export default function Home() {
 				<Tabs defaultValue='nelimitat'>
 					<TabsList className='p-2 py-3 bg-white mx-auto my-8 rounded-full w-fit flex gap-4'>
 						<TabsTrigger
-							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs '
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs md:text-md'
 							value='nelimitat'
 						>
 							Nelimitat
 						</TabsTrigger>
 						<TabsTrigger
-							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs '
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs md:text-md'
 							value='sedinte'
 						>
 							Sedinte
 						</TabsTrigger>
 						<TabsTrigger
-							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs '
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs md:text-md'
 							value='personalizate'
 						>
 							Antrenor personal
