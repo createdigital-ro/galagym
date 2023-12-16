@@ -75,26 +75,26 @@ export default function Home() {
 				</div>
 			</section>
 			<section className='bg-yellow-400 w-full py-16 my-12 shadow-hard-xl'>
-				<div className='text-center'>
-					<h2 className='text-6xl font-bold text-center'>Tarife abonamente</h2>
+				<div className='text-center m-4'>
+					<h2 className='text-5xl lg:text-6xl font-bold text-center'>Tarife abonamente</h2>
 					<p className='text-lg my-1'>Descopera tipurile noastre de abonomente, precum si preturile lor</p>
 				</div>
 				<Tabs defaultValue='nelimitat'>
 					<TabsList className='p-2 py-3 bg-white mx-auto my-8 rounded-full w-fit flex gap-4'>
 						<TabsTrigger
-							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full'
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs '
 							value='nelimitat'
 						>
 							Nelimitat
 						</TabsTrigger>
 						<TabsTrigger
-							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full'
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs '
 							value='sedinte'
 						>
 							Sedinte
 						</TabsTrigger>
 						<TabsTrigger
-							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full'
+							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs '
 							value='personalizate'
 						>
 							Antrenor personal
