@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { PageTitle } from '../../_components/typography';
 
 const Echipa = () => {
 	const echipa = [
@@ -32,7 +33,7 @@ const Echipa = () => {
 				height={130}
 				className='hidden sm:block absolute right-0 top-64 w-[90px] h-[400px] lg:w-[170px] lg:h-[500px]'
 			/>
-			<h1 className='text-4xl md:text-6xl font-bold text-center text-[#0f0f0f] mt-4'>Echipa noastra</h1>
+			<PageTitle>Echipa noastra</PageTitle>
 			<h2 className='text-center text-[#0f0f0f] max-w-[400px] mx-auto md:max-w-[800px] md:text-2xl mt-2 mb-8'>
 				Antrenori personali care vă indrumă cu zâmbetul pe buze în călătoria către forma fizică ideala.
 			</h2>

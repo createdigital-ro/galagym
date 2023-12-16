@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { Phone, Facebook, Instagram } from 'lucide-react';
-import EmailForm from '../_components/EmailForm';
+import EmailForm from '../../_components/EmailForm';
 import Image from 'next/image';
 
 const Contact = () => {
