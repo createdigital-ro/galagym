@@ -43,8 +43,8 @@ const Footer = (props: Props) => {
 	];
 
 	return (
-		<footer className='bg-[#0f0f0f] text-white flex flex-col md:flex-row justify-between xl:justify-around px-16 py-14 mt-[200px] items-center '>
-			<div className='flex flex-col justify-center gap-2 items-center mb-4 md:mb-0'>
+		<footer className='bg-[#0f0f0f] text-white flex flex-col md:flex-row justify-between xl:justify-around px-16 py-14 mt-[100px] md:mt-[150px] items-start '>
+			<div className='flex flex-col justify-center gap-2 items-center xl:mt-4 mb-4 md:mb-0'>
 				<Image src='/logo.svg' alt='Logo gala gym' width={100} height={100} />
 				<address>
 					<a href='https://www.google.com/maps/place/Gala+Gym/@44.4100839,26.177722,17z/data=!3m1!4b1!4m6!3m5!1s0x40b1fc22089f71db:0xda6b8e24b73af3dc!8m2!3d44.4100801!4d26.1802969!16s%2Fg%2F11c70j2rmk?entry=ttu'>
@@ -67,7 +67,7 @@ const Footer = (props: Props) => {
 				</div>
 				<div>
 					<h2 className='font-bold mb-2 text-3xl'>Socials</h2>
-					<div className='flex flex-col gap-2 text-lg'>
+					<div className='flex flex-col gap-2  text-lg'>
 						{socials.map((s, index) => (
 							<div key={index} className='flex gap-2'>
 								{s.icon}

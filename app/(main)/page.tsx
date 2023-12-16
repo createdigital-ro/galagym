@@ -74,7 +74,7 @@ export default function Home() {
 					))}
 				</div>
 			</section>
-			<section className='bg-yellow-400 w-full py-16 my-12 shadow-hard-xl'>
+			<section className='bg-yellow-400 w-full py-16 mt-12 shadow-hard-xl'>
 				<div className='text-center m-4'>
 					<h2 className='text-5xl lg:text-6xl font-bold text-center'>Tarife abonamente</h2>
 					<p className='text-lg my-1'>Descopera tipurile noastre de abonomente, precum si preturile lor</p>
@@ -104,9 +104,9 @@ export default function Home() {
 						className='flex flex-col md:flex-row max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
 						value='nelimitat'
 					>
-						{unlimited.map((membership) => (
+						{unlimited.map((membership, i) => (
 							<div
-								key={membership.type}
+								key={i}
 								className='bg-white text-black even:scale-125 rounded-md w-[200px] py-3 px-5 mx-auto shadow-[3px_3px] shadow-black relative'
 							>
 								{membership.tag && (
@@ -126,9 +126,9 @@ export default function Home() {
 						className='flex flex-col md:flex-row max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
 						value='sedinte'
 					>
-						{limited.map((membership) => (
+						{limited.map((membership, i) => (
 							<div
-								key={membership.type}
+								key={i}
 								className='bg-white text-black even:scale-125 rounded-md w-[200px] py-3 px-5 mx-auto shadow-[3px_3px] shadow-black relative'
 							>
 								{membership.tag && (
@@ -148,9 +148,9 @@ export default function Home() {
 						className='flex flex-col md:flex-row max-w-2xl data-[state=inactive]:hidden gap-12 mx-auto'
 						value='personalizate'
 					>
-						{personalTrainer.map((membership) => (
+						{personalTrainer.map((membership, i) => (
 							<div
-								key={membership.type}
+								key={i}
 								className='bg-white text-black even:scale-125 rounded-md w-[200px] py-3 px-5 mx-auto shadow-[3px_3px] shadow-black relative'
 							>
 								{membership.tag && (
