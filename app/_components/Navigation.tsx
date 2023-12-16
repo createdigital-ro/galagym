@@ -45,7 +45,7 @@ const Navigation = () => {
 					))}
 				</div>
 			</div>
-			<div className='sm:hidden'>
+			<nav className='sm:hidden'>
 				<MenuIcon
 					className='cursor-pointer'
 					onClick={() => {
@@ -53,7 +53,7 @@ const Navigation = () => {
 					}}
 				/>
 				<div
-					className={`absolute top-0 right-0 w-[300px] h-screen backdrop-blur-md bg-white/75 p-3 animate-in fade-in-0 duration-300 transition ${
+					className={`fixed z-20 top-0 right-0 w-[300px] h-screen backdrop-blur-md bg-white/75 p-3 animate-in fade-in-0 duration-300 transition ${
 						!isOpen && 'hidden'
 					}`}
 				>
@@ -63,8 +63,15 @@ const Navigation = () => {
 							setIsOpen((open) => !open);
 						}}
 					/>
+					<div className='flex flex-col gap-4 ml-auto my-24'>
+						{pages.map(({ text, link }) => (
+							<Link key={text} className='hover:underline text-6xl text-right' href={link}>
+								{text}
+							</Link>
+						))}
+					</div>
 				</div>
-			</div>
+			</nav>
 		</nav>
 	);
 };
