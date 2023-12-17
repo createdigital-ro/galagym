@@ -66,7 +66,7 @@ const Navigation = () => {
 					<div className='flex flex-col gap-4 ml-auto my-24'>
 						{pages.map(({ text, link }) => (
 							<Link key={text} className='hover:underline text-6xl text-right' href={link}>
-								{text}
+								{text} 
 							</Link>
 						))}
 					</div>
