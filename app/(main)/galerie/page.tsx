@@ -5,19 +5,27 @@ import Image from 'next/image';
 
 const photos = [
 	{
-		url: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		url: '/galerie/1.jpeg',
 		alt: 'Gym photo',
 	},
 	{
-		url: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		url: '/galerie/2.jpeg',
 		alt: 'Gym photo',
 	},
 	{
-		url: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		url: '/galerie/3.jpeg',
 		alt: 'Gym photo',
 	},
 	{
-		url: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+		url: '/galerie/4.jpeg',
+		alt: 'Gym photo',
+	},
+	{
+		url: '/galerie/5.jpeg',
+		alt: 'Gym photo',
+	},
+	{
+		url: '/galerie/7.jpeg',
 		alt: 'Gym photo',
 	},
 ];
@@ -31,8 +39,8 @@ const GalleryPage = () => {
 					<Image
 						key={photo.alt}
 						className='object-cover border divide-yellow-400 border-yellow-400 p-1 mx-auto object-center w-[400px] h-[400px]'
-						width={400}
-						height={400}
+						width={1000}
+						height={1000}
 						src={photo.url}
 						alt={photo.alt}
 					/>
