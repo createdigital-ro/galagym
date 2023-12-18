@@ -53,7 +53,13 @@ export default function Home() {
 					</p>
 				</div>
 				<div className=''>
-					<Image className='shadow-hard-lg' src={'/galagym.png.jpg'} height={1200} width={800} alt='Gala gym cladire' />
+					<Image
+						className='shadow-hard-lg'
+						src={'/galagym.png.jpg'}
+						height={1200}
+						width={800}
+						alt='Gala gym cladire'
+					/>
 				</div>
 			</section>
 			<hr className='my-24 border-black max-w-7xl mx-auto' />
