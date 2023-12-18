@@ -26,13 +26,13 @@ const Program = () => {
 				</div>
 
 				<div className='bg-black text-white text-center py-4 w-full shadow-[4px_4px] rounded-lg shadow-yellow-400'>
-					<p className='sm:text-3xl  lg:text-4xl  font-semibold pb-2'>Sambata</p>
+					<p className='sm:text-3xl  lg:text-4xl  font-semibold pb-2'>Sâmbătă</p>
 					<p className='text-3xl sm:text-5xl lg:text-6xl font-bold'>08:30 - 17:00</p>
 				</div>
 
 				<div className='flex flex-col items-center'>
-					<p className='sm:text-3xl  lg:text-4xl font-semibold'>Duminica</p>
-					<p className='text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wider'>INCHIS</p>
+					<p className='sm:text-3xl  lg:text-4xl font-semibold'>Duminică</p>
+					<p className='text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wider'>ÎNCHIS</p>
 				</div>
 			</div>
 		</div>
