@@ -5,16 +5,28 @@ import { PageTitle } from '../../_components/typography';
 const Echipa = () => {
 	const echipa = [
 		{
-			name: 'Alexandru',
+			name: 'Mihai',
 			role: 'Antrenor personal',
-			imageUrl: '/antrenor.png',
-			imageAlt: 'Antrenor personal cu 3 ani de experienta',
+			imageUrl: '/Mihai.png',
+			imageAlt: 'Antrenor personal cu ani de experienta',
 		},
 		{
-			name: 'Cosmin',
+			name: 'Silvia',
 			role: 'Antrenor personal',
-			imageUrl: '/antrenor.png',
-			imageAlt: 'Antrenor personal cu 2 ani de experienta',
+			imageUrl: '/Silvia.png',
+			imageAlt: 'Antrenor personal cu ani de experienta',
+		},
+		{
+			name: 'George',
+			role: 'Antrenor personal',
+			imageUrl: '/George.png',
+			imageAlt: 'Antrenor personal cu ani de experienta',
+		},
+		{
+			name: 'Manu',
+			role: 'Antrenor personal',
+			imageUrl: '/Manu.png',
+			imageAlt: 'Antrenor personal cu ani de experienta',
 		},
 	];
 	return (
@@ -39,18 +51,18 @@ const Echipa = () => {
 			</h2>
 			<div
 				className={`grid grid-cols-1 ${
-					echipa.length >= 3 ? 'xl:grid-cols-3' : ''
-				} md:grid-cols-2 w-fit mx-auto md:justify-center items-center md:gap-10 gap-8 mt-12`}
+					echipa.length === 3 ? 'xl:grid-cols-3' : ''
+				} ${echipa.length === 4 ? 'xl:grid-cols-2' : ''} md:grid-cols-2 w-fit mx-auto md:justify-center items-center md:gap-10 gap-8 mt-12`}
 			>
 				{echipa.map((member) => (
 					<Link key={member.name} href='/preturi'>
-						<div className='border-2 border-[#0f0f0f] shadow-lg hover:scale-105 active:scale-105'>
+						<div className='border-4 border-[#0f0f0f] shadow-lg hover:scale-105 active:scale-105'>
 							<Image
 								src={member.imageUrl}
 								alt={member.imageAlt}
 								width={100}
 								height={100}
-								className='shadow-mg w-[200px] lg:w-[250px]'
+								className='shadow-mg w-[200px] lg:w-[250px] h-[415px] object-cover'
 							/>
 							<div className='leading-none p-3'>
 								<div className='flex'>
