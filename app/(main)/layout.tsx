@@ -10,7 +10,7 @@ const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en">
       <body className={basier.className}>
-        <Announcement message="PROGRAM DE SĂRBĂTORI: 25-26 DECEMBRIE INCHIS | 1-2 IANUARIE INCHIS" />
+        <Announcement message="PROGRAM DE SĂRBĂTORI: 25-26 DECEMBRIE ÎNCHIS | 1-2 IANUARIE ÎNCHIS" />
         <Navigation />
         <div className="max-w-[1700px] mx-auto">
           <div className="mx-4">{children}</div>
