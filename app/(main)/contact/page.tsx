@@ -36,7 +36,7 @@ const Contact = () => {
 			<div className='flex flex-col lg:flex-row lg:justify-center lg:gap-12 items-center lg:mt-16'>
 				<div className='bg-[#0f0f0f] shadow-[6px_6px] lg:my-auto shadow-yellow-400 self-center text-white w-[290px] sm:w-[310px] xl:py-4 mb-8 py-2'>
 					<h3 className='font-bold text-center text-2xl py-8 xl:text-3xl'>
-						Ne gasesti si pe <br />
+						Ne găsești și pe <br />
 						<span className='text-yellow-400'>social media</span>
 					</h3>
 					<div className='flex flex-col gap-6'>
@@ -51,7 +51,7 @@ const Contact = () => {
 						))}
 					</div>
 					<div className='my-12 flex flex-col text-center font-semibold gap-3'>
-						<h3 className='text-2xl xl:text-3xl'>Da-ne un telefon</h3>
+						<h3 className='text-2xl xl:text-3xl'>Dă-ne un telefon</h3>
 						<a
 							href='tel:0750427049'
 							className='flex self-center items-center justify-center hover:cursor-pointer xl:text-2xl'

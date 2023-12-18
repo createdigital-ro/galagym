@@ -8,23 +8,23 @@ import * as z from 'zod';
 export const ZodFormData = z.object({
 	name: z
 		.string({
-			required_error: 'Trebuie sa introduceti un email.',
-			invalid_type_error: 'Numele nu este un sir de caractere valid.',
+			required_error: 'Trebuie să introduceți un email.',
+			invalid_type_error: 'Numele nu este un șir de caractere valid.',
 		})
-		.min(1, { message: 'Numele trebuie sa fie mai lung de un caracter.' }),
-	email: z.string().email({ message: 'Adresa de email introdusa este invalida.' }),
+		.min(1, { message: 'Numele trebuie să fie mai lung de un caracter.' }),
+	email: z.string().email({ message: 'Adresa de email introdusă este invalidă.' }),
 	subject: z
 		.string({
-			required_error: 'Trebuie sa introduceti un mesaj.',
-			invalid_type_error: 'Mesajul nu este un sir de caractere valid.',
+			required_error: 'Trebuie să introduceți un mesaj.',
+			invalid_type_error: 'Mesajul nu este un șir de caractere valid.',
 		})
-		.min(5, { message: 'Subiectul trebuie sa aiba cel putin 5 caractere.' }),
+		.min(5, { message: 'Subiectul trebuie să aibă cel puțin 5 caractere.' }),
 	message: z
 		.string({
-			required_error: 'Trebuie sa introduceti un mesaj.',
-			invalid_type_error: 'Mesajul nu este un sir de caractere valid.',
+			required_error: 'Trebuie să introduceți un mesaj.',
+			invalid_type_error: 'Mesajul nu este un șir de caractere valid.',
 		})
-		.min(10, { message: 'Mesajul trebuie sa aiba cel putin 10 caractere.' }),
+		.min(10, { message: 'Mesajul trebuie să aibă cel puțin 10 caractere.' }),
 });
 
 const EmailForm = () => {
@@ -79,7 +79,7 @@ const EmailForm = () => {
 					name='name'
 					value={formData.name}
 					onChange={handleChange}
-					placeholder='Nume intreg'
+					placeholder='Nume întreg'
 					className={inputStyles}
 				/>
 				<input
