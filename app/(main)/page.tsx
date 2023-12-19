@@ -14,25 +14,25 @@ const personalTrainer = memberships.personalTrainer;
 const cards = [
 	{
 		icon: <PersonStanding className={cardClass} />,
-		title: 'Antrenorii nostri',
+		title: 'Antrenorii noștri',
 		content:
 			'Alătură-te nouă pentru o experiență de fitness condusă de specialiști certificați. Beneficiază de ghidare profesională și susținere personalizată pentru a-ți atinge obiectivele.',
 	},
 	{
 		icon: <CalendarHeart className={`${cardClass}`} />,
-		title: 'Comunitate Unită',
+		title: 'Comunitate unită',
 		content:
-			'Comunitatea unita în jurul pasiunii pentru fitness. Experimentează energie pozitivă, evenimente sociale și susținere reciprocă. Transformă-ți antrenamentele în experiențe memorabile alături de noi.',
+			'Comunitatea unită în jurul pasiunii pentru fitness. Experimentează energie pozitivă și susținere reciprocă. Transformă-ți antrenamentele în experiențe memorabile alături de noi.',
 	},
 	{
 		icon: <Dumbbell className={`${cardClass}`} />,
-		title: 'Echipament Avansat',
+		title: 'Echipament avansat',
 		content:
 			'Beneficiază de facilități moderne și echipamente specializate, concepute pentru a-ți maximiza performanța și a-ți transforma antrenamentele în realizări extraordinare.',
 	},
 	{
 		icon: <BookHeart className={`${cardClass}`} />,
-		title: 'Programe de Fitness',
+		title: 'Programe de fitness',
 		content:
 			'Explorează programe de fitness adaptate nevoilor tale specifice. De la începători până la avansați, oferim planuri personalizate care îți pot transforma obiectivele în realitate. ',
 	},
@@ -49,7 +49,7 @@ export default function Home() {
 						FII TU.
 					</h1>
 					<p className='text-4xl max-w-sm mt-12'>
-						Adopta un stil de viata <u className='underline-offset-2 italic'>sanatos</u> alaturi de GalaGym
+						Adoptă un stil de viață <u className='underline-offset-2 italic'>sănătos</u> alături de Gala Gym
 					</p>
 				</div>
 				<div className=''>
@@ -65,8 +65,8 @@ export default function Home() {
 			<hr className='my-24 border-black max-w-7xl mx-auto' />
 			<section>
 				<div className='text-center'>
-					<h2 className='text-6xl font-bold text-center'>Motive sa ni te alaturi</h2>
-					<p className='text-lg my-1'>Motivul perfect pentru a ne acompania în călătoria ta fitness</p>
+					<h2 className='text-6xl font-bold text-center'>Motive să ni te alături</h2>
+					<p className='text-lg my-1'>Motivul perfect pentru a ne acompania în călătoria ta în fitness</p>
 				</div>
 				<div className='grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto my-20'>
 					{cards.map((card) => (
@@ -97,7 +97,7 @@ export default function Home() {
 							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs md:text-md'
 							value='sedinte'
 						>
-							Sedinte
+							Ședințe
 						</TabsTrigger>
 						<TabsTrigger
 							className='data-[state=active]:bg-yellow-400 data-[state=active]:text-black shadow-none rounded-full text-xs md:text-md'
