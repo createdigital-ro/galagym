@@ -5,18 +5,6 @@ import { PageTitle } from '../../_components/typography';
 const Echipa = () => {
   const echipa = [
     {
-      name: "Mihai",
-      role: "Antrenor personal",
-      imageUrl: "/Mihai.png",
-      imageAlt: "Antrenor personal cu ani de experienta",
-    },
-    {
-      name: "Silvia",
-      role: "Antrenor personal",
-      imageUrl: "/Silvia.png",
-      imageAlt: "Antrenor personal cu ani de experienta",
-    },
-    {
       name: "George",
       role: "Antrenor personal",
       imageUrl: "/George.png",
@@ -26,6 +14,18 @@ const Echipa = () => {
       name: "Manu",
       role: "Antrenor personal",
       imageUrl: "/Manu.png",
+      imageAlt: "Antrenor personal cu ani de experienta",
+    },
+    {
+      name: "Silvia",
+      role: "Antrenor personal",
+      imageUrl: "/Silvia.png",
+      imageAlt: "Antrenor personal cu ani de experienta",
+    },
+    {
+      name: "Mihai",
+      role: "Antrenor personal",
+      imageUrl: "/Mihai.png",
       imageAlt: "Antrenor personal cu ani de experienta",
     },
   ];
