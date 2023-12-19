@@ -17,15 +17,15 @@ const photos = [
 		alt: 'Gym photo',
 	},
 	{
-		url: '/galerie/4.jpeg',
-		alt: 'Gym photo',
-	},
-	{
 		url: '/galerie/5.jpeg',
 		alt: 'Gym photo',
 	},
 	{
 		url: '/galerie/7.jpeg',
+		alt: 'Gym photo',
+	},
+	{
+		url: '/galagym.png',
 		alt: 'Gym photo',
 	},
 ];
