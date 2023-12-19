@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const MainLayout = ({ children }: PropsWithChildren) => {
 	return (
-		<html lang='en'>
+		<html lang='ro'>
 			<body className={basier.className}>
 				<Announcement message='PROGRAM DE SĂRBĂTORI: 25-26 DECEMBRIE ÎNCHIS | 1-2 IANUARIE ÎNCHIS' />
 				<Navigation />
