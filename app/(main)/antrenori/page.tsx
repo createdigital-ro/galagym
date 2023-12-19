@@ -1,9 +1,21 @@
-import Image from "next/image";
-import Link from "next/link";
-import { PageTitle } from "../../_components/typography";
+import Image from 'next/image';
+import Link from 'next/link';
+import { PageTitle } from '../../_components/typography';
 
 const Echipa = () => {
   const echipa = [
+    {
+      name: "Mihai",
+      role: "Antrenor personal",
+      imageUrl: "/Mihai.png",
+      imageAlt: "Antrenor personal cu ani de experienta",
+    },
+    {
+      name: "Silvia",
+      role: "Antrenor personal",
+      imageUrl: "/Silvia.png",
+      imageAlt: "Antrenor personal cu ani de experienta",
+    },
     {
       name: "George",
       role: "Antrenor personal",
@@ -14,18 +26,6 @@ const Echipa = () => {
       name: "Manu",
       role: "Antrenor personal",
       imageUrl: "/Manu.png",
-      imageAlt: "Antrenor personal cu ani de experienta",
-    },
-    {
-      name: "Silvia",
-      role: "Antrenor personal",
-      imageUrl: "/Silvia.png",
-      imageAlt: "Antrenor personal cu ani de experienta",
-    },
-    {
-      name: "Mihai",
-      role: "Antrenor personal",
-      imageUrl: "/Mihai.png",
       imageAlt: "Antrenor personal cu ani de experienta",
     },
   ];

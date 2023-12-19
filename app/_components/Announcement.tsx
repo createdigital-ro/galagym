@@ -8,7 +8,7 @@ type AnnouncementType = {
 const Announcement = ({ message, link }: AnnouncementType) => {
 	return (
 		<div className='w-full text-md bg-yellow-400 py-1 font-semibold text-center uppercase'>
-			<p className='underline'>{message}</p>
+			<p>{message}</p>
 		</div>
 	);
 };
