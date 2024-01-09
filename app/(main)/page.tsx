@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../_components/ui/tabs';
 import { memberships } from '@/utils/static';
 
+import Script from 'next/script';
+
 const cardClass = 'w-8 h-8';
 
 const unlimited = memberships.unlimited;
@@ -41,6 +43,15 @@ const cards = [
 export default function Home() {
 	return (
 		<div className='mt-20'>
+			<Script src={`https://www.googletagmanager.com/gtag/js?id=G-EWJ4M22EWR`} />
+			<Script id='google-analytics'>
+				{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-EWJ4M22EWR');
+				`}
+			</Script>
 			<section className='flex flex-col-reverse lg:flex-row gap-8 items-center justify-between'>
 				<div>
 					<h1 className='text-5xl xl:text-6xl 2xl:text-7xl font-semibold'>
